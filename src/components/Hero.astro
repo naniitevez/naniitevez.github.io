@@ -1,0 +1,45 @@
+---
+import code_simbol_1 from "../../public/code_simbol_1.png";
+import code_simbol_2 from "../../public/code_simbol_2.png";
+import code_simbol_3 from "../../public/code_simbol_3.png";
+import "@fontsource/bebas-neue";
+---
+
+<section class="hero">
+  <p class="name">
+    <img class="icon" src={code_simbol_1.src} width="40px" height="50" />
+    <span>Nicole</span>
+    <img class="icon" src={code_simbol_2.src} width="30px" height="100px" />
+    <span>Tevez</span>
+    <img class="icon" src={code_simbol_3.src} width="40px" height="50" />
+  </p>
+  <h1 class="title">Frontend Developer</h1>
+</section>
+
+<style>
+  .hero {
+    height: calc(100vh - 36px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 36px;
+  }
+  .name {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 80px;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    letter-spacing: 5px;
+  }
+  .icon {
+    margin: 0 10px;
+  }
+  .title {
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 5px;
+  }
+</style>

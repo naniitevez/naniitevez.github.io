@@ -3,6 +3,8 @@ interface Props {
   title: string;
 }
 
+// Supports weights 100-900
+import "@fontsource-variable/onest";
 const { title } = Astro.props;
 ---
 
@@ -17,11 +19,13 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <div class="dot"></div>
     <slot />
   </body>
 </html>
 <style is:global>
   :root {
+    /* color-scheme: ligth dark; */
     --primary-color: #03ba5b;
     --primary-darkest-color: #145935;
     --primary-black: #161616;
@@ -32,11 +36,30 @@ const { title } = Astro.props;
   }
   html {
     font-family: "Onest Variable", sans-serif;
-    background: var(--secondary-black);
   }
   body {
+    background: var(--secondary-black);
+    color: var(--white);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+  }
+  .dot {
+    position: absolute;
+    margin-top: -400px;
+    width: 800px;
+    height: 700px;
+    background: radial-gradient(
+      circle,
+      #03ba5b -60%,
+      rgba(255, 0, 0, 0) 70%,
+      rgba(255, 225, 225, 0) 30%
+    );
+  }
+  section {
+    max-width: 1200px;
+    width: 100%;
   }
 </style>

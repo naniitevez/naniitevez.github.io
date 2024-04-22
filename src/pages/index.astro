@@ -1,9 +1,17 @@
 ---
+import Hero from "../components/Hero.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Nicole Tevez | Portfolio">
-  <main></main>
+  <main>
+    <Hero />
+  </main>
 </Layout>
 
-<style></style>
+<style>
+  main {
+    display: flex;
+    justify-content: center;
+  }
+</style>
