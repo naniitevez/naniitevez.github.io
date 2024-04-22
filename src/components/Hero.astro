@@ -3,6 +3,7 @@ import code_simbol_1 from "../../public/code_simbol_1.png";
 import code_simbol_2 from "../../public/code_simbol_2.png";
 import code_simbol_3 from "../../public/code_simbol_3.png";
 import "@fontsource/bebas-neue";
+import Label from "../layouts/Label.astro";
 ---
 
 <section class="hero">
@@ -14,6 +15,11 @@ import "@fontsource/bebas-neue";
     <img class="icon" src={code_simbol_3.src} width="40px" height="50" />
   </p>
   <h1 class="title">Frontend Developer</h1>
+  <div class="labels">
+    <Label text="Desarrolladora React" />
+    <Label text="Co-Organizadora" />
+    <Label text="Comunidad React" />
+  </div>
 </section>
 
 <style>
@@ -40,5 +46,10 @@ import "@fontsource/bebas-neue";
     font-size: 30px;
     font-weight: 300;
     letter-spacing: 5px;
+  }
+  .labels {
+    display: flex;
+    justify-content: space-between;
+    width: 460px;
   }
 </style>
