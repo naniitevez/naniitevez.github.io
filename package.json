@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@fontsource-variable/onest": "^5.0.4",
+    "@fontsource/bebas-neue": "^5.0.20",
     "astro": "^4.6.3"
   }
 }
