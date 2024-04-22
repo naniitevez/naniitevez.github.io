@@ -1,34 +1,47 @@
 ---
-import code_simbol_1 from "../../public/code_simbol_1.png";
-import code_simbol_2 from "../../public/code_simbol_2.png";
-import code_simbol_3 from "../../public/code_simbol_3.png";
 import "@fontsource/bebas-neue";
 import Label from "../layouts/Label.astro";
+import code_simbol_1 from "../assets//code_simbol_1.png";
+import code_simbol_2 from "../assets//code_simbol_2.png";
+import code_simbol_3 from "../assets//code_simbol_3.png";
+import arrow_down from "../assets//double_arrow_down.png";
 ---
 
 <section class="hero">
-  <p class="name">
-    <img class="icon" src={code_simbol_1.src} width="40px" height="50" />
-    <span>Nicole</span>
-    <img class="icon" src={code_simbol_2.src} width="30px" height="100px" />
-    <span>Tevez</span>
-    <img class="icon" src={code_simbol_3.src} width="40px" height="50" />
-  </p>
-  <h1 class="title">Frontend Developer</h1>
-  <div class="labels">
-    <Label text="Desarrolladora React" />
-    <Label text="Co-Organizadora" />
-    <Label text="Comunidad React" />
+  <div class="text-container">
+    <p class="name">
+      <img class="icon" src={code_simbol_1.src} width="40px" height="50" />
+      <span>Nicole</span>
+      <img class="icon" src={code_simbol_2.src} width="30px" height="100px" />
+      <span>Tevez</span>
+      <img class="icon" src={code_simbol_3.src} width="40px" height="50" />
+    </p>
+    <h1 class="title">Frontend Developer</h1>
+    <div class="labels">
+      <Label text="Desarrolladora React" hash />
+      <Label text="Co-Organizadora" hash />
+      <Label text="Comunidad React" hash />
+    </div>
+  </div>
+  <div>
+    <img class="double-arrow" src={arrow_down.src} width="20px" height="20px" />
   </div>
 </section>
 
 <style>
-  .hero {
-    height: calc(100vh - 36px);
+  .hero,
+  .text-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+  }
+  .hero {
+    height: calc(100vh - 36px);
+    justify-content: center;
+  }
+  .text-container {
+    margin-bottom: 150px;
+    margin-top: 100px;
   }
   .name {
     font-family: "Bebas Neue", sans-serif;
@@ -51,5 +64,8 @@ import Label from "../layouts/Label.astro";
     display: flex;
     justify-content: space-between;
     width: 460px;
+  }
+  .double-arrow {
+    opacity: 0.5;
   }
 </style>

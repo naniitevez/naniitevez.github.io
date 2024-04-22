@@ -1,9 +1,16 @@
 ---
 interface Props {
   text: string;
+  hash?: boolean;
 }
 
-const { text } = Astro.props;
+const { text, hash } = Astro.props;
 ---
 
-<div class="label">#{text}</div>
+<div class="label">{hash && <span>#</span>}{text}</div>
+
+<style>
+  span {
+    color: #03ba5b;
+  }
+</style>
