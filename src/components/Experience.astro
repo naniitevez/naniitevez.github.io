@@ -1,0 +1,53 @@
+---
+import Label from "../layouts/Label.astro";
+import ExperienceCard from "../components/ExperienceCard.astro";
+import {
+  AvenidaExperiences,
+  ConvectaExpetiences,
+  SofttekExperiences,
+  FizzmodExperiences,
+} from "../experience/Experiences";
+---
+
+<section id="experiencia" class="section-margin">
+  <div class="label-container">
+    <Label text="Experiencia" />
+  </div>
+  <div>
+    <ExperienceCard
+      title="Software Developer Ssr"
+      date="Marzo 2023 - Actualidad"
+      company="Avenida +"
+      companyUrl="https://avenidamas.com/"
+      jobDescriptions={AvenidaExperiences}
+    />
+    <ExperienceCard
+      title="Desarrolladora Frontend Freelance"
+      date="Enero - Marzo 2024"
+      company="Convecta"
+      companyUrl="https://convecta.cl/"
+      jobDescriptions={ConvectaExpetiences}
+    />
+    <ExperienceCard
+      title="Software Developer"
+      date="Noviembre - Diciembre 2022"
+      company="Softtek"
+      companyUrl="https://www.softtek.com/es/"
+      jobDescriptions={SofttekExperiences}
+    />
+    <ExperienceCard
+      title="Desarrolladora Frontend Junior"
+      date="Julio 2021 - Noviembre 2022"
+      company="Fizzmod"
+      companyUrl="https://fizzmod.com/"
+      jobDescriptions={FizzmodExperiences}
+    />
+  </div>
+</section>
+
+<style>
+  .label-container {
+    margin: 0 auto 70px;
+    width: fit-content;
+  }
+</style>

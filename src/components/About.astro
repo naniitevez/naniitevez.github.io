@@ -1,34 +1,36 @@
 ---
 import avatar from "../assets/Nicole_Tevez_Avatar.png";
-import github from "../assets/github.svg";
-import linkedin from "../assets/linkedin.svg";
+import github from "../assets/github.png";
+import linkedin from "../assets/linkedin.png";
 import Label from "../layouts/Label.astro";
 ---
 
-<section id="sobre-mi" class="about">
+<section id="sobre-mi" class="about section-margin">
   <div class="image-container">
     <img class="avatar" src={avatar.src} width="200px" height="200px" />
     <div class="contact">
       <a href="https://github.com/naniitevez" title="GitHub" target="_blank"
-        ><img src={github.src} width="34px" height="34px" /></a
+        ><img src={github.src} width="25px" height="25px" /></a
       >
       <a
         href="https://www.linkedin.com/in/nicoletevez/"
         title="LinkedIn"
-        target="_blank"><img src={linkedin.src} width="34px" height="34px" /></a
+        target="_blank"><img src={linkedin.src} width="25px" height="25px" /></a
       >
     </div>
   </div>
   <div class="text-container">
-    <div><Label text="Sobre mi" /></div>
-    <p>
-      Soy una desarrolladora frontend con cerca de 3 años de experiencia en la
-      industria del comercio electrónico, especializada en el diseño y maquetado
-      de interfaces de usuario. Mi formación dentro del campo ha sido
-      autodidacta en su mayoría y el enfoque que he tomado se centra en crear
-      experiencias visuales atractivas y funcionales para los usuarios. Estoy en
-      busca de nuevos desafíos y experiencias que me permitan crecer
-      profesionalmente a otro nive
+    <Label text="Sobre mi" />
+    <p class="about-me">
+      Soy una apasionada <span class="strong">desarrolladora frontend</span> con
+      casi tres años de experiencia en la industria del <span class="strong"
+        >comercio electrónico</span
+      >. Mi enfoque se centra en el <span class="strong">diseño</span> y <span
+        class="strong">maquetado</span
+      > de interfaces de usuario atractivas y funcionales. A lo largo de mi carrera,
+      he cultivado habilidades <span class="strong">autodidactas</span> que me han
+      permitido destacar en la creación de experiencias visuales cautivadoras para
+      los usuarios.
     </p>
   </div>
 </section>
@@ -36,8 +38,6 @@ import Label from "../layouts/Label.astro";
 <style>
   .about {
     display: flex;
-    max-width: 900px;
-    margin: 80px 0 90px;
   }
   .image-container,
   .text-container {
@@ -60,16 +60,19 @@ import Label from "../layouts/Label.astro";
   .avatar {
     border-radius: 50%;
   }
-  .contact,
-  .text-container {
-    display: flex;
-    justify-content: space-between;
+  .about-me {
+    font-size: 18px;
+  }
+  .strong {
+    color: var(--primary-color);
   }
   .contact {
     position: absolute;
-    bottom: -40px;
+    bottom: -30px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    width: 90px;
+    width: 75px;
     padding: 6px 15px;
     background-image: linear-gradient(
       to right,

@@ -35,6 +35,7 @@ const { title } = Astro.props;
     --primary-black: #161616;
     --secondary-black: #181818;
     --grey: #282828;
+    --darkest-grey: #3a3a3a;
     --secondary-grey: #a5a5a5;
     --white: #edeeee;
   }
@@ -66,14 +67,16 @@ const { title } = Astro.props;
     );
   }
   section {
-    max-width: 1200px;
+    max-width: 900px;
     width: 100%;
+  }
+  .section-margin {
+    margin: 80px 0 90px;
   }
   .label {
     width: fit-content;
     background: var(--grey);
     color: var(--secondary-grey);
-    padding: 8px;
     border-radius: 10px;
     font-size: 14px;
   }

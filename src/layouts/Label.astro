@@ -7,9 +7,18 @@ interface Props {
 const { text, hash } = Astro.props;
 ---
 
-<div class="label">{hash && <span>#</span>}{text}</div>
+<div class=`label ${hash ? "tag" : ""}`>{hash && <span>#</span>}{text}</div>
 
 <style>
+  .label {
+    font-size: 20px;
+    margin-bottom: 40px;
+    padding: 8px 15px;
+  }
+  .tag {
+    font-size: 16px;
+    padding: 8px;
+  }
   span {
     color: #03ba5b;
   }

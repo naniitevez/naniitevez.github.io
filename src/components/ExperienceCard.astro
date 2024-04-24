@@ -1,0 +1,88 @@
+---
+interface Props {
+  title: string;
+  date: string;
+  company: string;
+  companyUrl: string;
+  jobDescriptions: string[];
+}
+
+import link from "../assets/link_icon.png";
+import line from "../assets/line.png";
+const { title, date, company, companyUrl, jobDescriptions } = Astro.props;
+---
+
+<article>
+  <header>
+    <p>{title}</p>
+    <div class="date">
+      <p>{date}</p>
+      <span class="line"></span>
+    </div>
+  </header>
+
+  <div class="company">
+    <img class="icon" src={link.src} width="12px" height="14px" />
+    <a href={companyUrl}>{company}</a>
+  </div>
+  <ul>
+    {jobDescriptions.map((description) => <li>{description}</li>)}
+  </ul>
+</article>
+
+<style>
+  article {
+    border: 1px solid var(--darkest-grey);
+    border-radius: 10px;
+    padding: 10px 25px;
+    margin-bottom: 40px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--darkest-grey);
+    margin-bottom: 15px;
+    color: var(--white);
+  }
+  .date {
+    display: flex;
+    align-items: center;
+  }
+  .line {
+    margin-left: 15px;
+    width: 30px;
+    height: 5px;
+    background: var(--primary-color);
+    border-radius: 10px;
+  }
+  .company {
+    display: flex;
+  }
+  a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: var(--primary-color);
+  }
+  .icon {
+    margin-right: 5px;
+  }
+  ul {
+    color: var(--secondary-grey);
+    list-style: none;
+  }
+  li {
+    font-size: 18px;
+  }
+  ul li::before {
+    content: "\2022";
+    color: #03ba5b;
+    font-size: 18px;
+    margin-right: 0.5em;
+  }
+</style>
