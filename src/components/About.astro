@@ -5,7 +5,7 @@ import linkedin from "../assets/linkedin.svg";
 import Label from "../layouts/Label.astro";
 ---
 
-<section id="about-me" class="about">
+<section id="sobre-mi" class="about">
   <div class="image-container">
     <img class="avatar" src={avatar.src} width="200px" height="200px" />
     <div class="contact">
@@ -37,39 +37,53 @@ import Label from "../layouts/Label.astro";
   .about {
     display: flex;
     max-width: 900px;
-    margin-top: 80px;
-    margin-bottom: 90px;
+    margin: 80px 0 90px;
+  }
+  .image-container,
+  .text-container {
+    flex-direction: column;
   }
   .image-container {
     width: 200px;
     height: 200px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     position: relative;
-    border: 1px solid var(--primary-color);
+    background-image: linear-gradient(
+      to bottom,
+      var(--primary-black),
+      var(--primary-darkest-color)
+    );
+    border: 1px solid var(--primary-darkest-color);
     border-radius: 50%;
   }
   .avatar {
     border-radius: 50%;
   }
+  .contact,
+  .text-container {
+    display: flex;
+    justify-content: space-between;
+  }
   .contact {
     position: absolute;
     bottom: -40px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 90px;
-    padding: 8px 20px;
-    border: 1px solid var(--primary-color);
+    padding: 6px 15px;
+    background-image: linear-gradient(
+      to right,
+      var(--primary-black),
+      var(--primary-darkest-color),
+      var(--primary-color)
+    );
+    opacity: 0.9;
+    border: 1px inset var(--primary-color);
     border-radius: 10px;
   }
   .text-container {
     flex-grow: 1;
     margin-left: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
   p {
     color: var(--secondary-grey);
