@@ -3,14 +3,14 @@ interface Props {
   image: string;
   title: string;
   description: string;
-  tecnologies: string[];
+  technologies: string[];
   webLink?: string;
   githubLink?: string;
 }
 
 import link from "../assets/link_icon.png";
 import github from "../assets/github.png";
-const { image, title, description, tecnologies, webLink, githubLink } =
+const { image, title, description, technologies, webLink, githubLink } =
   Astro.props;
 ---
 
@@ -24,7 +24,7 @@ const { image, title, description, tecnologies, webLink, githubLink } =
     </header>
     <p class="description">{description}</p>
     <div class="tags-container">
-      {tecnologies.map((tec) => <div class="label">{tec}</div>)}
+      {technologies.map((tec) => <div class="label">{tec}</div>)}
     </div>
     <div class="links-container">
       <div class="link">

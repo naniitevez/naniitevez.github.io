@@ -13,7 +13,7 @@ const projects = [
     title: "Website para agentes",
     description:
       "Sitio web personalizable y configurable para agentes inmobiliarios.",
-    tecnologies: ["Nextjs", "React", "TypeScript", "Styled Components"],
+    technologies: ["Nextjs", "React", "TypeScript", "Styled Components"],
     webLink: "https://restofmycloud.com/",
   },
   {
@@ -21,7 +21,7 @@ const projects = [
     title: "Web de React Buenos Aires",
     description:
       "Sitio web para centralizar toda la informacion de la comunidad React Buenos Aires.",
-    tecnologies: ["Nextjs", "React", "TypeScript", "Styled Components"],
+    technologies: ["Nextjs", "React", "TypeScript", "Styled Components"],
     webLink: "https://reactbuenosaires.com.ar/",
     githubLink: "https://github.com/reactbuenosaires/website",
   },
@@ -29,7 +29,7 @@ const projects = [
     image: `${romc.src}`,
     title: "Rest of my Cloud",
     description: "Blog educativo para aprender a programar.",
-    tecnologies: ["Next", "React", "TypeScript", "Sass"],
+    technologies: ["Next", "React", "TypeScript", "Sass"],
     webLink: "https://cnvct-webs-dev.azurewebsites.net/ricardo",
   },
   {
@@ -37,7 +37,7 @@ const projects = [
     title: "Call for speakers",
     description:
       "Aplicacion de agenda para la realizacion de charlas en una comunidad de programacion.",
-    tecnologies: ["React", "TypeScript", "CSS"],
+    technologies: ["React", "TypeScript", "CSS"],
     webLink: "https://latinonet.online/callforspeakers/",
     githubLink: "https://github.com/latinonetonline/callforspeakers",
   },
@@ -45,14 +45,14 @@ const projects = [
     image: `${hotel.src}`,
     title: "Valle del Volcán",
     description: "Sitio web para un sofisticado club de hotelería.",
-    tecnologies: ["React", "TypeScript", "CSS"],
+    technologies: ["React", "TypeScript", "CSS"],
     webLink: "https://hotelvalledelvolcan.info/",
     githubLink: "https://github.com/aivenweb/hotelvalledelvolcan-website",
   },
 ];
 ---
 
-<section id="projects" class="">
+<section id="projects" class="projects-section">
   <div class="label-container">
     <Label text="Proyectos" />
   </div>
@@ -63,7 +63,7 @@ const projects = [
           image={project.image}
           title={project.title}
           description={project.description}
-          tecnologies={project.tecnologies}
+          technologies={project.technologies}
           webLink={project.webLink}
           githubLink={project.githubLink}
         />
@@ -71,3 +71,9 @@ const projects = [
     }
   </div>
 </section>
+
+<style>
+  .projects-section {
+    margin-bottom: 90px;
+  }
+</style>

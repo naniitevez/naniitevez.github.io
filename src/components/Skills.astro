@@ -1,0 +1,54 @@
+---
+import Label from "../layouts/Label.astro";
+import next from "../assets/icons/next.png";
+import react from "../assets/icons/react.png";
+import typescript from "../assets/icons/typescript.png";
+import javascript from "../assets/icons/javascript.png";
+import html from "../assets/icons/html.png";
+import css from "../assets/icons/css.png";
+import sass from "../assets/icons/sass.png";
+import git from "../assets/icons/git.png";
+import github from "../assets/github.png";
+import ionic from "../assets/icons/ionic.png";
+
+const icons = [
+  next,
+  react,
+  typescript,
+  javascript,
+  html,
+  css,
+  sass,
+  git,
+  github,
+  ionic,
+];
+---
+
+<section id="skills" class="skills">
+  <div class="label-container">
+    <Label text="Skills" />
+  </div>
+  <div class="technologies-container">
+    {
+      icons.map((icon) => (
+        <div class="icon">
+          <img src={icon.src} width="50px" height="50px" />
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .skills {
+    margin-bottom: 90px;
+  }
+  .technologies-container {
+    display: flex;
+    justify-content: center;
+  }
+  .icon {
+    margin: 0 8px;
+  }
+</style>
