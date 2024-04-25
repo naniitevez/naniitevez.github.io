@@ -1,0 +1,101 @@
+---
+interface Props {
+  image: string;
+  title: string;
+  description: string;
+  tecnologies: string[];
+  webLink?: string;
+  githubLink?: string;
+}
+
+import link from "../assets/link_icon.png";
+import github from "../assets/github.png";
+const { image, title, description, tecnologies, webLink, githubLink } =
+  Astro.props;
+---
+
+<article>
+  <div class="image-container">
+    <img src={image} width="220px" height="220px" />
+  </div>
+  <div class="text-container">
+    <header>
+      <p>{title}</p>
+    </header>
+    <p class="description">{description}</p>
+    <div class="tags-container">
+      {tecnologies.map((tec) => <div class="label">{tec}</div>)}
+    </div>
+    <div class="links-container">
+      <div class="link">
+        <img class="icon" src={link.src} width="16px" height="16px" />
+        <a href={webLink}> Visitar sitio </a>
+      </div>
+      <div class="link">
+        <img class="icon" src={github.src} width="16px" height="16px" />
+        <a href={githubLink}> Ver codigo </a>
+      </div>
+    </div>
+  </div>
+</article>
+
+<style>
+  article {
+    display: flex;
+    border: 1px solid var(--darkest-grey);
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  .image-container {
+    border-radius: 10px 0 0 10px;
+    width: 220px;
+    height: 220px;
+  }
+  .image-container img {
+    border-radius: 10px 0 0 10px;
+  }
+  .text-container {
+    width: 100%;
+    padding: 10px 25px;
+  }
+  header {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--darkest-grey);
+    margin-bottom: 15px;
+    color: var(--white);
+  }
+  header p {
+    margin: 10px 0;
+  }
+  .description {
+    font-size: 18px;
+    color: var(--secondary-grey);
+  }
+  .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+  }
+  .label {
+    padding: 8px;
+    margin-right: 10px;
+  }
+  .links-container {
+    display: flex;
+    margin-top: 30px;
+  }
+  .link {
+    margin-right: 25px;
+  }
+  .link a {
+    text-decoration: none;
+    color: var(--white);
+  }
+  .link a:hover {
+    color: var(--primary-color);
+  }
+  .icon {
+    margin-right: 10px;
+  }
+</style>

@@ -2,6 +2,7 @@
 import About from "../components/About.astro";
 import Experience from "../components/Experience.astro";
 import Hero from "../components/Hero.astro";
+import Projects from "../components/Projects.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -10,12 +11,19 @@ import Layout from "../layouts/Layout.astro";
   <div class="container">
     <About />
     <Experience />
+    <Projects />
   </div>
 </Layout>
 
 <style>
   .container {
-    background-image: linear-gradient(to bottom, #181818, #272727);
+    background-image: linear-gradient(
+      to bottom,
+      #181818,
+      #282828,
+      #161616,
+      #111111
+    );
     width: 100%;
     display: flex;
     flex-direction: column;

@@ -8,7 +8,6 @@ interface Props {
 }
 
 import link from "../assets/link_icon.png";
-import line from "../assets/line.png";
 const { title, date, company, companyUrl, jobDescriptions } = Astro.props;
 ---
 
@@ -35,7 +34,7 @@ const { title, date, company, companyUrl, jobDescriptions } = Astro.props;
     border: 1px solid var(--darkest-grey);
     border-radius: 10px;
     padding: 10px 25px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   header {
     display: flex;
@@ -75,6 +74,7 @@ const { title, date, company, companyUrl, jobDescriptions } = Astro.props;
   ul {
     color: var(--secondary-grey);
     list-style: none;
+    padding-left: 18px;
   }
   li {
     font-size: 18px;
