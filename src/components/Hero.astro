@@ -10,11 +10,26 @@ import arrow_down from "../assets//double_arrow_down.png";
 <section class="hero">
   <div class="text-container">
     <p class="name">
-      <img class="icon" src={code_simbol_1.src} width="40px" height="50" />
+      <img
+        class="icon arrow"
+        src={code_simbol_1.src}
+        width="40px"
+        height="50"
+      />
       <span>Nicole</span>
-      <img class="icon" src={code_simbol_2.src} width="30px" height="100px" />
+      <img
+        class="icon slash"
+        src={code_simbol_2.src}
+        width="30px"
+        height="100px"
+      />
       <span>Tevez</span>
-      <img class="icon" src={code_simbol_3.src} width="40px" height="50" />
+      <img
+        class="icon arrow"
+        src={code_simbol_3.src}
+        width="40px"
+        height="50"
+      />
     </p>
     <h1 class="title">Frontend Developer</h1>
     <div class="labels">
@@ -67,5 +82,45 @@ import arrow_down from "../assets//double_arrow_down.png";
   }
   .double-arrow {
     opacity: 0.5;
+  }
+  @media (max-width: 900px) {
+    .name {
+      font-size: 60px;
+    }
+    .title {
+      font-size: 20px;
+    }
+    .labels {
+      width: 500px;
+    }
+  }
+  @media (max-width: 580px) {
+    .text-container {
+      margin-bottom: 100px;
+      margin-top: 80px;
+    }
+    .name {
+      font-size: 40px;
+    }
+    .title {
+      margin-bottom: 40px;
+    }
+    .icon {
+      margin: 0px 8px;
+    }
+    .name .icon.arrow {
+      width: 25px;
+      height: 30px;
+    }
+    .name .icon.slash {
+      width: 20px;
+      height: 60px;
+    }
+    .labels {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
   }
 </style>

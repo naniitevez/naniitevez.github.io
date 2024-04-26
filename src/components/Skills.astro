@@ -35,7 +35,7 @@ const icons = [
   <div class="label-container">
     <Label text="Skills" />
   </div>
-  <div class="technologies-container">
+  <div class="technologies-container flex-container">
     {
       icons.map((icon) => (
         <div class="icon">
@@ -53,6 +53,7 @@ const icons = [
   .technologies-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
   .icon {
     margin: 0 8px;

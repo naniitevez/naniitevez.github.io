@@ -84,4 +84,33 @@ const { title } = Astro.props;
     border-radius: 10px;
     font-size: 14px;
   }
+  @media (max-width: 900px) {
+    .flex-container {
+      padding: 0 60px;
+    }
+    .dot {
+      width: 550px;
+    }
+  }
+  @media (max-width: 768px) {
+    .flex-container {
+      padding: 0 30px;
+    }
+  }
+  @media (max-width: 580px) {
+    .dot {
+      width: 300px;
+      height: 500px;
+      margin-top: -200px;
+      background: radial-gradient(
+        circle,
+        #03ba5b -60%,
+        rgba(255, 0, 0, 0) 50%,
+        rgba(255, 225, 225, 0) 30%
+      );
+    }
+    .section-margin {
+      margin: 40px 0 50px;
+    }
+  }
 </style>

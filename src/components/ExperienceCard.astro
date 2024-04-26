@@ -13,7 +13,7 @@ const { title, date, company, companyUrl, jobDescriptions } = Astro.props;
 
 <article>
   <header>
-    <p>{title}</p>
+    <p class="title">{title}</p>
     <div class="date">
       <p>{date}</p>
       <span class="line"></span>
@@ -45,9 +45,18 @@ const { title, date, company, companyUrl, jobDescriptions } = Astro.props;
     margin-bottom: 15px;
     color: var(--white);
   }
+  .title {
+    min-width: 60%;
+    display: flex;
+    align-items: center;
+  }
   .date {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+  }
+  .date p {
+    text-align: end;
   }
   .line {
     margin-left: 15px;
@@ -84,5 +93,35 @@ const { title, date, company, companyUrl, jobDescriptions } = Astro.props;
     color: #03ba5b;
     font-size: 18px;
     margin-right: 0.5em;
+  }
+  @media (max-width: 900px) {
+    header {
+      font-size: 18px;
+    }
+    li {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 768px) {
+    article {
+      padding: 8px 15px;
+    }
+    header {
+      font-size: 16px;
+    }
+    .line {
+      width: 20px;
+    }
+  }
+  @media (max-width: 580px) {
+    .date {
+      margin-left: 10px;
+    }
+    .date p {
+      font-size: 14px;
+    }
+    ul {
+      padding-left: 12px;
+    }
   }
 </style>

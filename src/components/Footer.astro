@@ -3,16 +3,21 @@ import logo from "../assets/nicole_tevez.png";
 ---
 
 <section>
-  <img src={logo.src} width="150px" />
-  <p>nicole.tevez.97@gmail.com</p>
+  <div class="footer flex-container">
+    <img src={logo.src} width="150px" />
+    <p>nicole.tevez.97@gmail.com</p>
+  </div>
 </section>
 
 <style>
   section {
     border-top: 1px solid var(--darkest-grey);
+
+    padding: 20px 0 40px;
+  }
+  .footer {
     display: flex;
     justify-content: space-between;
-    padding: 20px 0 40px;
   }
   p {
     color: var(--secondary-grey);
