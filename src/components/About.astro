@@ -29,6 +29,7 @@ import Label from "../layouts/Label.astro";
     </p>
     <p class="about-me">
       Formo parte de la organización de la comunidad <a
+        class="strong"
         href="https://reactbuenosaires.com.ar/">React en Buenos Aires</a
       >, donde mensualmente organizamos eventos de charlas de programación en
       colaboración con distintas empresas, para compartir <span class="strong"
@@ -73,6 +74,13 @@ import Label from "../layouts/Label.astro";
   }
   .about-me {
     font-size: 18px;
+    line-height: 22px;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
   }
   .strong {
     font-weight: 500;

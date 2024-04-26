@@ -27,14 +27,22 @@ const { image, title, description, technologies, webLink, githubLink } =
       {technologies.map((tec) => <div class="label">{tec}</div>)}
     </div>
     <div class="links-container">
-      <div class="link">
-        <img class="icon" src={link.src} width="16px" height="16px" />
-        <a href={webLink}> Visitar sitio </a>
-      </div>
-      <div class="link">
-        <img class="icon" src={github.src} width="16px" height="16px" />
-        <a href={githubLink}> Ver codigo </a>
-      </div>
+      {
+        webLink && (
+          <div class="link">
+            <img class="icon" src={link.src} width="16px" height="16px" />
+            <a href={webLink}> Visitar sitio </a>
+          </div>
+        )
+      }
+      {
+        githubLink && (
+          <div class="link">
+            <img class="icon" src={github.src} width="16px" height="16px" />
+            <a href={githubLink}> Ver codigo </a>
+          </div>
+        )
+      }
     </div>
   </div>
 </article>
