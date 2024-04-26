@@ -7,15 +7,34 @@ import Label from "../layouts/Label.astro";
 
 <section id="about-me" class="about section-margin">
   <div class="image-container">
-    <img class="avatar" src={avatar.src} width="200px" height="200px" />
+    <img
+      class="avatar"
+      src={avatar.src}
+      width="200px"
+      height="200px"
+      alt="Foto de perfil."
+    />
     <div class="contact">
       <a href="https://github.com/naniitevez" title="GitHub" target="_blank"
-        ><img src={github.src} width="25px" height="25px" /></a
+        ><img
+          src={github.src}
+          width="25px"
+          height="25px"
+          alt="Icono de GitHub."
+          title="Ir a GitHub"
+        /></a
       >
       <a
         href="https://www.linkedin.com/in/nicoletevez/"
         title="LinkedIn"
-        target="_blank"><img src={linkedin.src} width="25px" height="25px" /></a
+        target="_blank"
+        ><img
+          src={linkedin.src}
+          width="25px"
+          height="25px"
+          alt="Icono de LinkedIn."
+          title="Ir a LinkedIn"
+        /></a
       >
     </div>
   </div>

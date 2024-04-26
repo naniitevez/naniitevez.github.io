@@ -16,7 +16,12 @@ const { image, title, description, technologies, webLink, githubLink } =
 
 <article>
   <div class="image-container">
-    <img src={image} width="220px" />
+    <img
+      src={image}
+      width="220px"
+      alt={`Imagen de proyecto: ${title}.`}
+      title={`Captura de ${title}`}
+    />
   </div>
   <div class="text-container">
     <header>
@@ -30,7 +35,14 @@ const { image, title, description, technologies, webLink, githubLink } =
       {
         webLink && (
           <div class="link">
-            <img class="icon" src={link.src} width="16px" height="16px" />
+            <img
+              class="icon"
+              src={link.src}
+              width="16px"
+              height="16px"
+              alt="Icono de enlace."
+              title={`Visitar ${title}`}
+            />
             <a href={webLink}> Visitar sitio </a>
           </div>
         )
@@ -38,8 +50,15 @@ const { image, title, description, technologies, webLink, githubLink } =
       {
         githubLink && (
           <div class="link">
-            <img class="icon" src={github.src} width="16px" height="16px" />
-            <a href={githubLink}> Ver codigo </a>
+            <img
+              class="icon"
+              src={github.src}
+              width="16px"
+              height="16px"
+              alt="Icono de GitHub."
+              title="Ver código en GitHub"
+            />
+            <a href={githubLink}> Ver código </a>
           </div>
         )
       }
