@@ -43,7 +43,7 @@ const { image, title, description, technologies, webLink, githubLink } =
               alt="Icono de enlace."
               title={`Visitar ${title}`}
             />
-            <a href={webLink}> Visitar sitio </a>
+            <a href={webLink} title="Link para visitar el sitio" target="_blank"> Visitar sitio </a>
           </div>
         )
       }
@@ -58,7 +58,7 @@ const { image, title, description, technologies, webLink, githubLink } =
               alt="Icono de GitHub."
               title="Ver código en GitHub"
             />
-            <a href={githubLink}> Ver código </a>
+            <a href={githubLink} title="Link para visitar el repositorio" target="_blank"> Ver código </a>
           </div>
         )
       }
