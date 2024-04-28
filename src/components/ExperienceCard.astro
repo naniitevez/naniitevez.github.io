@@ -22,7 +22,7 @@ const { title, date, company, companyUrl, jobDescriptions } = Astro.props;
 
   <div class="company">
     <img class="icon" src={link.src} width="12px" height="14px" alt="Icono de enlace." />
-    <a href={companyUrl}>{company}</a>
+    <a href={companyUrl} title="Link para visitar el sitio de la empresa" target="_blank">{company}</a>
   </div>
   <ul>
     {jobDescriptions.map((description) => <li>{description}</li>)}
